@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token Radar</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Token Radar</h1>
+      <p class="subtitle">Pre-launch token value forecast</p>
+    </header>
+    <main>
+      <section id="board-section">
+        <h2>Board Ranking</h2>
+        <div class="controls">
+          <label>Filter: <input type="text" id="filter-input" placeholder="Search..."></label>
+          <label>Category: 
+            <select id="category-filter">
+              <option value="">All</option>
+            </select>
+          </label>
+          <label>Sort: 
+            <select id="sort-select">
+              <option value="implied">Implied Value</option>
+              <option value="tvl">TVL</option>
+              <option value="growth">Growth</option>
+            </select>
+          </label>
+        </div>
+        <table id="board-table">
+          <thead>
+            <tr>
+              <th>RANK</th>
+              <th>NAME</th>
+              <th>TVL</th>
+              <th>GROWTH</th>
+              <th>AGE</th>
+              <th>IMPLIED VALUE</th>
+              <th>CHAINS</th>
+            </tr>
+          </thead>
+          <tbody id="board-body"></tbody>
+        </table>
+      </section>
+      <section id="detail-section" class="hidden">
+        <h2 id="detail-title"></h2>
+        <button id="close-detail">Close</button>
+        <div id="detail-content"></div>
+      </section>
+    </main>
+  </div>
+  <script src="../data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* Token Radar Dashboard Styles */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  background: #0a0a0a;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+.container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #333; }
+header h1 { font-size: 28px; color: #fff; font-weight: 400; }
+.subtitle { color: #888; margin-top: 4px; }
+.controls { display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+.controls label { display: flex; flex-direction: column; font-size: 12px; color: #888; }
+.controls input, .controls select { padding: 4px 8px; border-radius: 4px; border: 1px solid #444; background: #1a1a1a; color: #e0e0e0; }
+#board-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+#board-table th, #board-table td { padding: 12px 8px; text-align: left; border-bottom: 1px solid #222; }
+#board-table th { position: sticky; top: 0; background: #1a1a1a; font-weight: 400; color: #888; }
+#board-table tr:hover { background: #1a1a1a; cursor: pointer; }
+#board-table tr.selected { background: #2a2a1a; }
+.hidden { display: none; }
+#detail-section { margin-top: 24px; }
+#detail-section h2 { font-size: 20px; margin-bottom: 12px; }
+#detail-content { background: #1a1a1a; padding: 16px; border-radius: 8px; }
+.farm-steps { margin-top: 16px; }
+.farm-steps h4 { margin-bottom: 8px; color: #888; }
+.farm-steps ol { margin-left: 20px; list-style-position: inside; }
+.farm-steps li { margin-bottom: 8px; padding: 8px; background: #0a0a0a; border-left: 3px solid #4a9; border-radius: 4px; }
+.price { color: #4a9; font-weight: 500; }
+.value-high { color: #0f0; }
+.value-low { color: #f44; }
+@media (max-width: 800px) {
+  #board-table { font-size: 12px; }
+  #board-table th, #board-table td { padding: 8px 4px; }
+}
